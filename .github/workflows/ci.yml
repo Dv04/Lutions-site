@@ -1,0 +1,37 @@
+name: Lutions Site CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Linting
+        run: npm run lint
+
+      - name: Run Jest Tests
+        run: npm test
+
+      - name: Run Playwright Tests
+        run: npx playwright test
+
+      - name: Run Production Build
+        run: npm run build
