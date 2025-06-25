@@ -8,7 +8,7 @@ export default function About() {
     <>
       {/* About Lutions Lab Section */}
       <Section title="About Lutions Lab" subtitle="Our Mission and Our Team">
-        <div className="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 leading-relaxed text-center">
+        <div className="prose prose-lg dark:prose-invert max-w-3xl mx-auto text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed text-center">
           <p>
             {aboutText}
           </p>

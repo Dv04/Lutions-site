@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require('tailwindcss/colors')
 
 const config: Config = {
   content: [
@@ -9,6 +10,14 @@ const config: Config = {
   darkMode: "class", // Enable dark mode using a class
   theme: {
     extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#4f46e5', // Indigo-600
+          hover: '#4338ca', // Indigo-700
+        },
+        secondary: '#9333ea', // Purple-600 from gradient
+        neutral: colors.slate,
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -33,6 +42,7 @@ const config: Config = {
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
   ],
 };
 export default config;

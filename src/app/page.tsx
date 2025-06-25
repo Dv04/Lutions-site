@@ -17,11 +17,11 @@ export default function Home() {
           {Testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white/50 dark:bg-gray-900/50 p-6 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm"
+              className="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
-              <p className="italic">"{testimonial.quote}"</p>
-              <p className="mt-4 font-semibold text-right">- {testimonial.name}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 text-right">
+              <p className="italic text-neutral-700 dark:text-neutral-300">"{testimonial.quote}"</p>
+              <p className="mt-4 font-semibold text-right text-neutral-800 dark:text-neutral-200">- {testimonial.name}</p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 text-right">
                 {testimonial.title}
               </p>
             </div>

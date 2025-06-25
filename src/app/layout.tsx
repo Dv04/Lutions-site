@@ -50,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-200 transition-colors duration-300`}
+        className={`${inter.className} bg-white dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 transition-colors duration-300`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark">
           <div className="relative isolate min-h-screen flex flex-col">
