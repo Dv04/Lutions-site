@@ -15,11 +15,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lutions Lab - Advancing AI and ML Frontiers",
     description: "No-code machine learning for everyone.",
-    url: "https://your-domain.com", // TODO: Update with your domain
+    // TODO: USER ACTION REQUIRED: Update this URL to your actual deployment domain.
+    url: "https://your-domain.com",
     siteName: "Lutions Lab",
     images: [
       {
-        url: "https://your-domain.com/og-image.png", // TODO: Update with your OG image URL
+        // TODO: USER ACTION REQUIRED:
+        // 1. Create an engaging Open Graph image (e.g., og-image.png) and place it in the 'public' folder.
+        // 2. Update this URL to point to your actual Open Graph image (e.g., "https://your-domain.com/og-image.png").
+        url: "https://your-domain.com/og-image.png",
         width: 1200,
         height: 630,
       },
@@ -31,8 +35,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lutions Lab - Advancing AI and ML Frontiers",
     description: "No-code machine learning for everyone.",
-    // TODO: Add your Twitter handle: creator: "@yourhandle",
-    images: ["https://your-domain.com/og-image.png"], // TODO: Update with your OG image URL
+    // TODO: USER ACTION REQUIRED: Add your Twitter handle here (e.g., creator: "@LutionsLab").
+    // creator: "@yourhandle",
+    // TODO: USER ACTION REQUIRED: Ensure the Twitter image URL points to your actual Open Graph image, same as above.
+    images: ["https://your-domain.com/og-image.png"],
   },
 };
 

@@ -90,6 +90,7 @@ export const FAQs = [
     },
 ];
 
+// TODO: USER ACTION REQUIRED: Replace these placeholder testimonials with actual user quotes.
 export const Testimonials = [
     {
         name: "A. Researcher",
