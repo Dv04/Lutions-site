@@ -16,7 +16,8 @@ export default function TeamSection() {
             <h3 className="mt-4 text-base font-semibold leading-7 tracking-tight text-neutral-900 dark:text-neutral-100">
               {person.name}
             </h3>
-            <p className="text-sm leading-6 text-neutral-600 dark:text-neutral-400">{person.role}</p>
+            <p className="text-sm leading-6 text-neutral-500 dark:text-neutral-400">{person.role}</p>
+            <p className="mt-2 text-xs leading-5 text-neutral-500 dark:text-neutral-400">{person.expertise}</p>
           </div>
         ))}
       </div>

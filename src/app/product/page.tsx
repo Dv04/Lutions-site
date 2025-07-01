@@ -13,10 +13,10 @@ export default function Product() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
-              From Dataset to Decision in Minutes.
+              Lutions Predictor
             </h1>
             <p className="mt-6 text-lg text-neutral-600 dark:text-neutral-300">
-              Lutions Predictor is your no-code AI co-pilot. It transforms the complex process of machine learning into a simple, intuitive GUI-based workflow, designed for researchers and professionals.
+              Lutions Predictor is your no-code AI co-pilot. It transforms the complex process of machine learning into a simple, intuitive GUI-based workflow, designed for researchers and professionals. From Dataset to Decision in Minutes.
             </p>
             <div className="mt-8 flex gap-4">
               <Link href="https://github.com/LutionsLab/Predictor" target="_blank" className="rounded-md bg-primary px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary-hover hover:-translate-y-0.5 transform transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
@@ -67,6 +67,16 @@ export default function Product() {
 
       {/* FAQ Section */}
       <FAQSection />
+
+      {/* Customized Software Solutions Section */}
+      <Section title="Lutions Predictor" subtitle="Placeholder text: Describe how Lutions Lab can also offer customized software solutions, leveraging the expertise demonstrated in Lutions Predictor. Mention tailoring solutions to specific client needs, integrating advanced AI/ML capabilities, and providing end-to-end development services.">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg text-neutral-600 dark:text-neutral-400">
+            Placeholder: Further details about custom solutions, perhaps with examples or a call to action to contact for consultation.
+          </p>
+          {/* You could add a button here e.g., <Link href="/contact" className="...">Contact Us for Custom Solutions</Link> */}
+        </div>
+      </Section>
     </>
   );
 }
