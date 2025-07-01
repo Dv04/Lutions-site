@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function TeamSection() {
     return (
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {TeamMembers.map((person) => (
           <div key={person.name} className="flex flex-col text-center bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/50">
             <div> {/* Added a div to wrap content that shouldn't grow, if image is fixed size */}

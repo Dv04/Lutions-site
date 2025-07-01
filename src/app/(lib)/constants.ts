@@ -26,12 +26,12 @@ export const TeamMembers = [
     imageUrl: "/assets/team/placeholder.png", // Placeholder
     expertise: "Placeholder: Proficient in data preprocessing, feature engineering, and ML algorithm optimization. Ensures high performance and accuracy of our ML solutions.",
   },
-  {
-    name: "Sahil Kadiwala",
-    role: "Core Member, Electrical Engineering",
-    imageUrl: "/assets/team/placeholder.png", // Placeholder
-    expertise: "Placeholder: Bridges the gap between hardware and software, specializing in sensor integration and data acquisition for ML applications in engineering.",
-  },
+  // {
+  //   name: "Sahil Kadiwala",
+  //   role: "Core Member, Electrical Engineering",
+  //   imageUrl: "/assets/team/placeholder.png", // Placeholder
+  //   expertise: "Placeholder: Bridges the gap between hardware and software, specializing in sensor integration and data acquisition for ML applications in engineering.",
+  // },
 ];
 
 // FROM: Lutions Predictor.pdf (Page 3)
