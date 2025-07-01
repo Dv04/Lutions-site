@@ -22,11 +22,11 @@ export const TeamMembers = [
     role: "Core Member, ML Developer",
     imageUrl: "/assets/team/placeholder.png", // Placeholder
   },
-  {
-    name: "Sahil Kadiwala",
-    role: "Core Member, Electrical Engineering",
-    imageUrl: "/assets/team/placeholder.png", // Placeholder
-  },
+  // {
+  //   name: "Sahil Kadiwala",
+  //   role: "Core Member, Electrical Engineering",
+  //   imageUrl: "/assets/team/placeholder.png", // Placeholder
+  // },
 ];
 
 // FROM: Lutions Predictor.pdf (Page 3)
