@@ -24,9 +24,9 @@ export default function Product() {
               </Link>
             </div>
           </div>
-          <div className="bg-neutral-800 rounded-lg p-2 shadow-2xl overflow-hidden">
+          <div className="bg-neutral-200 dark:bg-neutral-800 rounded-lg p-2 shadow-2xl overflow-hidden">
               {/* Placeholder for a screenshot of the app */}
-              <Image src="/assets/gui-screenshot-placeholder.png" alt="Lutions Predictor GUI Screenshot" width={1200} height={800} className="rounded-md shimmer-bg animate-shimmer" />
+              <Image src="/assets/gui-screenshot-placeholder.png" alt="Lutions Predictor GUI Screenshot" width={1200} height={800} className="rounded-md dark:shimmer-bg dark:animate-shimmer" />
           </div>
         </div>
       </Section>
@@ -53,7 +53,7 @@ export default function Product() {
 
       {/* Video Tutorial Section */}
       <Section title="See It In Action">
-         <div className="aspect-w-16 aspect-h-9 bg-neutral-800 rounded-lg overflow-hidden">
+         <div className="aspect-w-16 aspect-h-9 bg-neutral-200 dark:bg-neutral-800 rounded-lg overflow-hidden">
             {/* YouTube Embed Placeholder */}
             <iframe
                 className="w-full h-full"

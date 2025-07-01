@@ -4,10 +4,10 @@ import Section from "../../common/Section";
 export default function HeroSection() {
   return (
     <Section className="text-center pt-24 sm:pt-32">
-      <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-        {/* <span className="hero-gradient-bg bg-clip-text"> */}
+      <h1 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-6xl">
+        <span className="hero-text-gradient-bg bg-clip-text text-transparent">
           Advancing AI and ML Frontiers
-        {/* </span> */}
+        </span>
       </h1>
       <p className="mt-6 text-lg max-w-3xl mx-auto leading-8 text-neutral-600 dark:text-neutral-300 animate-fade-in-slide-up" style={{ animationDelay: '0.3s' }}>
         We empower researchers, professionals, and students to unlock the power of machine learning without writing a single line of code. Our intuitive tools bridge the gap between complex data and actionable insights.

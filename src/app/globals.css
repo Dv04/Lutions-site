@@ -26,11 +26,18 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-/* AI-inspired gradient background for hero sections */
+/* Refined gradient background for GradientGlow and potentially other decorative elements */
 .hero-gradient-bg {
-  background: linear-gradient(135deg, #4f46e5, #9333ea, #db2777, #f59e0b);
-  background-size: 400% 400%;
-  animation: gradient-pulse 15s ease-in-out infinite;
+  background: linear-gradient(135deg, theme('colors.indigo.500 / 80%'), theme('colors.purple.600 / 80%'), theme('colors.teal.500 / 70%'), theme('colors.cyan.600 / 70%'));
+  background-size: 300% 300%; /* Slightly smaller size for potentially softer blending */
+  animation: gradient-pulse 20s ease-in-out infinite; /* Slower animation */
+}
+
+/* Opaque version of the gradient specifically for text */
+.hero-text-gradient-bg {
+  background: linear-gradient(135deg, theme('colors.indigo.500'), theme('colors.purple.600'), theme('colors.teal.500'), theme('colors.cyan.600'));
+  background-size: 300% 300%;
+  animation: gradient-pulse 20s ease-in-out infinite; /* Keep animation consistent */
 }
 
 .shimmer-bg {

@@ -27,14 +27,14 @@ const config: Config = {
         "gradient-pulse": "gradient-pulse 10s ease-in-out infinite",
       },
       keyframes: {
-        "gradient-pulse": {
+        "gradient-pulse": { // Will be used by GradientGlow
           "0%, 100%": {
             "background-position": "0% 50%",
-            opacity: "0.5", // Slightly more subtle default
+            opacity: "0.3", // More subtle for background glow
           },
           "50%": {
             "background-position": "100% 50%",
-            opacity: "0.8", // Less intense peak
+            opacity: "0.6", // Max opacity for glow
           },
         },
         "fade-in-slide-up": {

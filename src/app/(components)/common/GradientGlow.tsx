@@ -1,7 +1,7 @@
 export default function GradientGlow() {
   return (
     <div
-      className="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl"
+      className="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl hidden dark:block" // Hidden in light mode
       aria-hidden="true"
     >
       <div

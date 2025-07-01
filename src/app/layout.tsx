@@ -50,9 +50,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-white dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 transition-colors duration-300`}
+        className={`${inter.className} bg-neutral-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-200 transition-colors duration-300`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="dark"> {/* Defaulting to dark, but light mode will be styled */}
           <div className="relative isolate min-h-screen flex flex-col">
             <GradientGlow />
             <Header />
