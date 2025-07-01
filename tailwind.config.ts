@@ -30,11 +30,11 @@ const config: Config = {
         "gradient-pulse": {
           "0%, 100%": {
             "background-position": "0% 50%",
-            opacity: "0.6",
+            opacity: "0.5", // Slightly more subtle default
           },
           "50%": {
             "background-position": "100% 50%",
-            opacity: "1",
+            opacity: "0.8", // Less intense peak
           },
         },
         "fade-in-slide-up": {
@@ -47,10 +47,20 @@ const config: Config = {
             transform: "translateY(0)",
           },
         },
+        "subtle-bob": {
+          "0%, 100%": { transform: "translateY(-2px)" },
+          "50%": { transform: "translateY(2px)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-1000px 0" },
+          "100%": { backgroundPosition: "1000px 0" },
+        }
       },
       animation: {
         "gradient-pulse": "gradient-pulse 10s ease-in-out infinite",
         "fade-in-slide-up": "fade-in-slide-up 0.8s ease-out forwards",
+        "subtle-bob": "subtle-bob 3s ease-in-out infinite",
+        "shimmer": "shimmer 2.5s infinite linear",
       },
     },
   },

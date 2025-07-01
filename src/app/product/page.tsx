@@ -24,9 +24,9 @@ export default function Product() {
               </Link>
             </div>
           </div>
-          <div className="bg-neutral-800 rounded-lg p-2 shadow-2xl">
+          <div className="bg-neutral-800 rounded-lg p-2 shadow-2xl overflow-hidden">
               {/* Placeholder for a screenshot of the app */}
-              <Image src="/assets/gui-screenshot-placeholder.png" alt="Lutions Predictor GUI Screenshot" width={1200} height={800} className="rounded-md" />
+              <Image src="/assets/gui-screenshot-placeholder.png" alt="Lutions Predictor GUI Screenshot" width={1200} height={800} className="rounded-md shimmer-bg animate-shimmer" />
           </div>
         </div>
       </Section>
@@ -35,10 +35,11 @@ export default function Product() {
       <Section title="Everything You Need for Code-Free ML">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {ProductFeatures.map((feature) => (
+            // Adding a subtle continuous animation to feature card icons
             <div key={feature.title} className="bg-white/50 dark:bg-neutral-900/50 p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 transition-all hover:border-primary/50 hover:-translate-y-1 backdrop-blur-lg">
               <div className="flex gap-4">
                 <div>
-                  <CheckCircleIcon className="h-7 w-7 text-primary" />
+                  <CheckCircleIcon className="h-7 w-7 text-primary animate-subtle-bob" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 dark:text-neutral-100">{feature.title}</h3>
@@ -69,8 +70,14 @@ export default function Product() {
       <FAQSection />
 
       {/* Customized Software Solutions Section */}
-      <Section title="Lutions Predictor" subtitle="Placeholder text: Describe how Lutions Lab can also offer customized software solutions, leveraging the expertise demonstrated in Lutions Predictor. Mention tailoring solutions to specific client needs, integrating advanced AI/ML capabilities, and providing end-to-end development services.">
+      <Section
+        title="Lutions Predictor"
+        subtitle="Placeholder text: Describe how Lutions Lab can also offer customized software solutions, leveraging the expertise demonstrated in Lutions Predictor. Mention tailoring solutions to specific client needs, integrating advanced AI/ML capabilities, and providing end-to-end development services."
+        className="bg-neutral-100 dark:bg-neutral-900"
+      >
         <div className="max-w-3xl mx-auto text-center">
+          {/* Placeholder for an icon, e.g., a gear or code icon */}
+          {/* <Cog8ToothIcon className="h-12 w-12 text-primary mx-auto mb-4" /> */}
           <p className="text-lg text-neutral-600 dark:text-neutral-400">
             Placeholder: Further details about custom solutions, perhaps with examples or a call to action to contact for consultation.
           </p>

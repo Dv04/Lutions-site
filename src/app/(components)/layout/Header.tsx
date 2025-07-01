@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation"; // Import usePathname
 import ThemeSwitcher from "./ThemeSwitcher";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
@@ -15,6 +16,7 @@ const NavLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // Get current pathname
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-neutral-200/50 dark:border-neutral-800/50 bg-white/95 dark:bg-neutral-950/90">
@@ -30,11 +32,22 @@ export default function Header() {
 
           {/* Centered Nav Links - Desktop */}
           <div className="hidden md:flex md:items-center md:space-x-8">
-            {NavLinks.map((link) => (
-              <Link key={link.name} href={link.href} className="relative font-medium text-neutral-500 dark:text-neutral-400 after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:text-neutral-900 dark:hover:text-white after:hover:scale-x-100">
-                {link.name}
-              </Link>
-            ))}
+            {NavLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`relative font-medium transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-full after:bg-primary after:transition-transform after:duration-300 hover:text-neutral-900 dark:hover:text-white ${
+                    isActive
+                      ? "text-primary dark:text-primary after:scale-x-100"
+                      : "text-neutral-500 dark:text-neutral-400 after:scale-x-0 hover:after:scale-x-100"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Right-aligned Icons */}
@@ -65,12 +78,24 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {NavLinks.map((link) => (
-              <Link key={link.name} href={link.href} className="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-700">
-                {link.name}
-              </Link>
-            ))}
-             <a href="https://github.com/LutionsLab" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-700">
+            {NavLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)} // Close menu on click
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive
+                      ? "bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary"
+                      : "text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+             <a href="https://github.com/LutionsLab" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800">
               <FaGithub className="h-5 w-5" />
               GitHub
             </a>

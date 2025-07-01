@@ -32,3 +32,14 @@ body {
   background-size: 400% 400%;
   animation: gradient-pulse 15s ease-in-out infinite;
 }
+
+.shimmer-bg {
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.2) 60%,
+    transparent 100%
+  );
+  background-size: 2000px 100%; /* Must be wider than the element */
+}

@@ -13,12 +13,14 @@ export default function Docs() {
             href="/Lutions-Predictor-Manual.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-md bg-primary px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-hover hover:-translate-y-0.5 transform transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="inline-flex items-center rounded-md bg-primary px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-hover hover:-translate-y-0.5 transform transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
+            {/* Placeholder for PDF Icon */}
+            {/* <DocumentArrowDownIcon className="h-5 w-5 mr-2" /> */}
             Download Manual (PDF)
           </Link>
         </div>
-        <p className="mt-6 text-sm text-neutral-500 dark:text-neutral-400">
+        <p className="mt-8 text-xs text-neutral-500 dark:text-neutral-400 border-t border-neutral-200 dark:border-neutral-700 pt-6">
             For advanced use-cases, developer guides, and contribution details, please visit our GitHub repository.
         </p>
       </div>
