@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, FormEvent } from "react";
+import JoinUsSection from "./JoinUsSection";
 
 export default function Footer() {
   const [formState, setFormState] = useState({ status: "idle", message: "" });
@@ -36,9 +37,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         {/* Feedback Form Section */}
         <div id="feedback" className="bg-white dark:bg-neutral-950/70 backdrop-blur-lg p-8 rounded-lg border border-neutral-200 dark:border-neutral-800">
-          <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">Provide Feedback</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">Contact Us</h2>
           <p className="mt-2 text-neutral-600 dark:text-neutral-400">
-            Have a suggestion or found a bug? Let us know!
+            Have a question, suggestion, or want to discuss a project? Let us know!
           </p>
           <form onSubmit={handleFeedbackSubmit} className="mt-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
@@ -73,8 +74,11 @@ export default function Footer() {
           </form>
         </div>
 
+        {/* Join Us Section */}
+        <JoinUsSection />
+
         {/* Footer Links and Copyright */}
-        <div className="mt-8 pt-8 border-t border-neutral-200 dark:border-neutral-800 md:flex md:items-center md:justify-between">
+        <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             <a href="https://github.com/LutionsLab" className="text-neutral-400 hover:text-neutral-500 dark:hover:text-white">
               <span className="sr-only">GitHub</span>

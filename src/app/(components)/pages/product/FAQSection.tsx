@@ -16,7 +16,7 @@ export default function FAQSection() {
             <div className="max-w-3xl mx-auto">
                 <div className="space-y-4">
                     {FAQs.map((faq, index) => (
-                        <div key={index} className="border border-gray-200 dark:border-gray-800 rounded-lg">
+                        <div key={index} className="border border-neutral-200 dark:border-neutral-700 rounded-lg">
                             <button
                                 onClick={() => toggleFAQ(index)}
                                 className="w-full flex justify-between items-center text-left p-4 sm:p-6"

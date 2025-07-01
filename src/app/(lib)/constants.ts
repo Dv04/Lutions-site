@@ -6,21 +6,25 @@ export const TeamMembers = [
     name: "Siddhi Vinayak Pandey",
     role: "Founder, GUI Layout & Structure Development",
     imageUrl: "/assets/team/placeholder.png", // Placeholder
+    expertise: "Placeholder: Specializes in intuitive user interface design and application architecture. Led the development of Lutions Predictor's GUI.",
   },
   {
     name: "Dev Sanghvi",
     role: "Core Member, Full-stack Developer",
     imageUrl: "/assets/team/placeholder.png", // Placeholder
+    expertise: "Placeholder: Expertise in building robust back-end systems and dynamic front-end experiences. Key contributor to the full-stack development of Lutions Lab projects.",
   },
   {
     name: "Heet Vekariya",
     role: "Core Member, ML Developer",
     imageUrl: "/assets/team/placeholder.png", // Placeholder
+    expertise: "Placeholder: Focuses on developing and implementing cutting-edge machine learning models. Drives the ML capabilities within Lutions Predictor.",
   },
   {
     name: "Naimish Bhuva",
     role: "Core Member, ML Developer",
     imageUrl: "/assets/team/placeholder.png", // Placeholder
+    expertise: "Placeholder: Proficient in data preprocessing, feature engineering, and ML algorithm optimization. Ensures high performance and accuracy of our ML solutions.",
   },
   // {
   //   name: "Sahil Kadiwala",
