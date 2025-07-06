@@ -67,7 +67,7 @@ export default function Product() {
                     Need a Custom AI Solution?
                 </h2>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-200">
-                    Beyond our flagship product, our team of experts specializes in developing bespoke AI and machine learning software tailored to your specific research or business needs. Let's build something powerful together.
+                    Beyond our flagship product, our team of experts specializes in developing bespoke AI and machine learning software tailored to your specific research or business needs. Let&apos;s build something powerful together.
                 </p>
                 <div className="mt-8">
                     <Link href="#contact-us" className="rounded-md bg-blue-700 dark:bg-blue-400 px-5 py-3 text-sm font-semibold text-white dark:text-blue-900 shadow-sm hover:bg-blue-800 dark:hover:bg-blue-300 hover:-translate-y-0.5 transform transition-all duration-200">

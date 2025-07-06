@@ -20,7 +20,7 @@ export default function Home() {
               className="relative bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
               <span className="absolute top-6 left-6 text-6xl text-primary/30 dark:text-primary/20 font-serif leading-none select-none" aria-hidden="true">&ldquo;</span>
-              <p className="italic text-neutral-700 dark:text-neutral-300 pt-8">"{testimonial.quote}"</p>
+              <p className="italic text-neutral-700 dark:text-neutral-300 pt-8">&quot;{testimonial.quote}&quot;</p>
               <p className="mt-4 font-semibold text-right text-neutral-800 dark:text-neutral-200">- {testimonial.name}</p>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 text-right">
                 {testimonial.title}
