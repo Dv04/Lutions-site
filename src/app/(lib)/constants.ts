@@ -4,33 +4,27 @@
 export const TeamMembers = [
   {
     name: "Siddhi Vinayak Pandey",
-    role: "Founder, GUI Layout & Structure Development",
-    imageUrl: "/assets/team/placeholder.png", // Placeholder
-    expertise: "Placeholder: Specializes in intuitive user interface design and application architecture. Led the development of Lutions Predictor's GUI.",
+    role: "Founder, System Architect",
+    expertise: "Specializing in UX design and bridging the gap between complex ML models and intuitive user interfaces.",
+    imageUrl: "/assets/team/placeholder.png",
   },
   {
     name: "Dev Sanghvi",
-    role: "Core Member, Full-stack Developer",
-    imageUrl: "/assets/team/placeholder.png", // Placeholder
-    expertise: "Placeholder: Expertise in building robust back-end systems and dynamic front-end experiences. Key contributor to the full-stack development of Lutions Lab projects.",
+    role: "Full-stack Developer",
+    expertise: "Expert in building robust, scalable web applications with Next.js and modern frontend technologies.",
+    imageUrl: "/assets/team/placeholder.png",
   },
   {
     name: "Heet Vekariya",
-    role: "Core Member, ML Developer",
-    imageUrl: "/assets/team/placeholder.png", // Placeholder
-    expertise: "Placeholder: Focuses on developing and implementing cutting-edge machine learning models. Drives the ML capabilities within Lutions Predictor.",
+    role: "Machine Learning Developer",
+    expertise: "Focused on implementing and optimizing machine learning algorithms and data pipeline engineering.",
+    imageUrl: "/assets/team/placeholder.png",
   },
   {
     name: "Naimish Bhuva",
-    role: "Core Member, ML Developer",
-    imageUrl: "/assets/team/placeholder.png", // Placeholder
-    expertise: "Placeholder: Proficient in data preprocessing, feature engineering, and ML algorithm optimization. Ensures high performance and accuracy of our ML solutions.",
-  },
-  {
-    name: "Sahil Kadiwala",
-    role: "Core Member, Electrical Engineering",
-    imageUrl: "/assets/team/placeholder.png", // Placeholder
-    expertise: "Placeholder: Bridges the gap between hardware and software, specializing in sensor integration and data acquisition for ML applications in engineering.",
+    role: "Machine Learning Developer",
+    expertise: "Ensures the core predictive engine is powerful and efficient, specializing in model training and evaluation.",
+    imageUrl: "/assets/team/placeholder.png",
   },
 ];
 

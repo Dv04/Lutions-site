@@ -1,11 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import { useState, FormEvent } from "react";
-import JoinUsSection from "./JoinUsSection";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const [formState, setFormState] = useState({ status: "idle", message: "" });
+  const pathname = usePathname();
+
+  // Determine the title based on the current page
+  const formTitle = pathname === '/product' ? "Provide Feedback" : "Contact Us";
 
   const handleFeedbackSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -33,51 +36,45 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-neutral-100 dark:bg-neutral-900/50 border-t border-neutral-200 dark:border-neutral-800">
+    <footer className="bg-neutral-100 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        {/* Feedback Form Section */}
-        <div id="feedback" className="bg-white dark:bg-neutral-950/70 backdrop-blur-lg p-8 rounded-lg border border-neutral-200 dark:border-neutral-800">
-          <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">Contact Us</h2>
+        <div id="contact-us" className="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg p-8 rounded-lg border border-neutral-200 dark:border-neutral-800 scroll-mt-20">
+          <h2 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">{formTitle}</h2>
           <p className="mt-2 text-neutral-600 dark:text-neutral-400">
-            Have a question, suggestion, or want to discuss a project? Let us know!
+            Have a suggestion, a project in mind, or want to get in touch? Let us know!
           </p>
           <form onSubmit={handleFeedbackSubmit} className="mt-6">
+            {/* Form fields with updated neutral colors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">First Name</label>
-                <input type="text" name="firstName" id="firstName" required className="mt-1 block w-full rounded-md bg-white dark:bg-neutral-900 border-neutral-300 dark:border-neutral-700 shadow-sm focus:border-primary focus:ring-primary focus:ring-opacity-50 transition-colors duration-200"/>
+                <input type="text" name="firstName" id="firstName" required className="mt-1 block w-full rounded-md bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700 shadow-sm focus:border-primary focus:ring-primary focus:ring-opacity-50 transition-colors duration-200"/>
               </div>
               <div>
                 <label htmlFor="lastName" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Last Name</label>
-                <input type="text" name="lastName" id="lastName" required className="mt-1 block w-full rounded-md bg-white dark:bg-neutral-900 border-neutral-300 dark:border-neutral-700 shadow-sm focus:border-primary focus:ring-primary focus:ring-opacity-50 transition-colors duration-200"/>
+                <input type="text" name="lastName" id="lastName" required className="mt-1 block w-full rounded-md bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700 shadow-sm focus:border-primary focus:ring-primary focus:ring-opacity-50 transition-colors duration-200"/>
               </div>
               <div className="sm:col-span-2">
                  <label htmlFor="email" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Email</label>
-                <input type="email" name="email" id="email" required className="mt-1 block w-full rounded-md bg-white dark:bg-neutral-900 border-neutral-300 dark:border-neutral-700 shadow-sm focus:border-primary focus:ring-primary focus:ring-opacity-50 transition-colors duration-200"/>
+                <input type="email" name="email" id="email" required className="mt-1 block w-full rounded-md bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700 shadow-sm focus:border-primary focus:ring-primary focus:ring-opacity-50 transition-colors duration-200"/>
               </div>
-               {/* Other fields are hidden for brevity but follow the same pattern */}
-               <input type="hidden" name="phone" value="N/A" />
-               <input type="hidden" name="country" value="N/A" />
-               <div className="sm:col-span-2">
-                <label htmlFor="feedback" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Feedback</label>
-                <textarea id="feedback" name="feedback" rows={4} required className="mt-1 block w-full rounded-md bg-white dark:bg-neutral-900 border-neutral-300 dark:border-neutral-700 shadow-sm focus:border-primary focus:ring-primary focus:ring-opacity-50 transition-colors duration-200"></textarea>
+              <input type="hidden" name="phone" value="N/A" />
+              <input type="hidden" name="country" value="N/A" />
+              <div className="sm:col-span-2">
+                <label htmlFor="feedback" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Message</label>
+                <textarea id="feedback" name="feedback" rows={4} required className="mt-1 block w-full rounded-md bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700 shadow-sm focus:border-primary focus:ring-primary focus:ring-opacity-50 transition-colors duration-200"></textarea>
               </div>
             </div>
             <div className="mt-6 flex justify-between items-center">
-                <button type="submit" disabled={formState.status === 'loading'}
-                        className="inline-flex items-center rounded-md border border-transparent bg-primary px-6 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:bg-neutral-400 dark:focus:ring-offset-neutral-950 transform transition-all duration-200 hover:-translate-y-0.5">
-                    {formState.status === 'loading' ? 'Submitting...' : 'Submit Feedback'}
+                <button type="submit" disabled={formState.status === 'loading'} className="inline-flex items-center rounded-md border border-transparent bg-primary px-6 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-hover hover:-translate-y-0.5 transform transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:bg-neutral-400">
+                    {formState.status === 'loading' ? 'Submitting...' : 'Submit'}
                 </button>
-                 {formState.status === 'success' && <p className="text-green-600 dark:text-green-500">{formState.message}</p>}
-                 {formState.status === 'error' && <p className="text-red-600 dark:text-red-500">{formState.message}</p>}
+                 {formState.status === 'success' && <p className="text-green-500">{formState.message}</p>}
+                 {formState.status === 'error' && <p className="text-red-500">{formState.message}</p>}
             </div>
           </form>
         </div>
-
-        {/* Join Us Section */}
-        <JoinUsSection />
-
-        {/* Footer Links and Copyright */}
+         {/* Copyright and social links section */}
         <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             <a href="https://github.com/LutionsLab" className="text-neutral-400 hover:text-neutral-500 dark:hover:text-white">

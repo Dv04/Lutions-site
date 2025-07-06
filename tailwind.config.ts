@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 const config: Config = {
   content: [
@@ -7,16 +7,17 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class", // Enable dark mode using a class
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#4f46e5', // Indigo-600
-          hover: '#4338ca', // Indigo-700
+          // Switched to Teal for a fresh, modern tech look
+          DEFAULT: colors.teal[600],
+          hover: colors.teal[700],
         },
-        secondary: '#9333ea', // Purple-600 from gradient
-        neutral: colors.slate,
+        secondary: colors.purple[500], // Kept a purple accent from the gradient
+        neutral: colors.zinc, // Switched to Zinc for a slightly warmer, professional gray palette
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -25,48 +26,29 @@ const config: Config = {
       },
       animation: {
         "gradient-pulse": "gradient-pulse 10s ease-in-out infinite",
+        "typing-blink": "typing-blink 0.7s infinite",
       },
       keyframes: {
-        "gradient-pulse": { // Will be used by GradientGlow
+        "gradient-pulse": {
           "0%, 100%": {
             "background-position": "0% 50%",
-            opacity: "0.3", // More subtle for background glow
+            opacity: "0.6",
           },
           "50%": {
             "background-position": "100% 50%",
-            opacity: "0.6", // Max opacity for glow
-          },
-        },
-        "fade-in-slide-up": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(20px)",
-          },
-          "100%": {
             opacity: "1",
-            transform: "translateY(0)",
           },
         },
-        "subtle-bob": {
-          "0%, 100%": { transform: "translateY(-2px)" },
-          "50%": { transform: "translateY(2px)" },
-        },
-        "shimmer": {
-          "0%": { backgroundPosition: "-1000px 0" },
-          "100%": { backgroundPosition: "1000px 0" },
+        "typing-blink": {
+          "0%, 100%": { "border-color": "transparent" },
+          "50%": { "border-color": "currentColor" },
         }
-      },
-      animation: {
-        "gradient-pulse": "gradient-pulse 10s ease-in-out infinite",
-        "fade-in-slide-up": "fade-in-slide-up 0.8s ease-out forwards",
-        "subtle-bob": "subtle-bob 3s ease-in-out infinite",
-        "shimmer": "shimmer 2.5s infinite linear",
       },
     },
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 };
 export default config;
