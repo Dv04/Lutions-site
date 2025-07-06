@@ -12,12 +12,44 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          // Switched to Teal for a fresh, modern tech look
-          DEFAULT: colors.teal[600],
-          hover: colors.teal[700],
+          // Professional blue for primary actions
+          DEFAULT: colors.blue[700],
+          hover: colors.blue[800],
+          dark: colors.blue[400],
+          'dark-hover': colors.blue[300],
         },
-        secondary: colors.purple[500], // Kept a purple accent from the gradient
-        neutral: colors.zinc, // Switched to Zinc for a slightly warmer, professional gray palette
+        secondary: {
+          DEFAULT: colors.blue[400],
+          dark: colors.blue[600],
+        },
+        neutral: {
+          50: '#fff', // White
+          100: colors.gray[100],
+          200: colors.gray[200],
+          400: colors.gray[400],
+          600: colors.gray[600],
+          700: colors.gray[700],
+          800: colors.gray[800],
+          900: '#000', // Black
+          dark: colors.gray[900],
+        },
+        // For backgrounds and cards
+        background: {
+          DEFAULT: '#fff',
+          dark: '#101624', // deep blue-black for dark mode
+        },
+        card: {
+          DEFAULT: '#fff',
+          dark: '#181e2a', // card bg for dark mode
+        },
+        border: {
+          DEFAULT: colors.gray[200],
+          dark: colors.gray[800],
+        },
+        text: {
+          DEFAULT: colors.gray[900],
+          dark: colors.gray[100],
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

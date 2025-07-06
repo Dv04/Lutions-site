@@ -56,7 +56,7 @@ export default function RootLayout({
           <div className="relative isolate min-h-screen flex flex-col">
             <GradientGlow />
             <Header />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow min-h-0">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>
